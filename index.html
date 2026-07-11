@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishwakarma Shocker Works - Precision Suspension</title>
+    <!-- CSS link for local styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts: Barlow Condensed, Inter, Geist, Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN and custom theme config from code.html -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-error": "#690005",
+                            "on-tertiary-fixed-variant": "#454747",
+                            "surface-container-low": "#1c1b1b",
+                            "surface-bright": "#3a3939",
+                            "on-primary": "#680008",
+                            "error": "#ffb4ab",
+                            "on-secondary-container": "#6a4800",
+                            "on-primary-container": "#fff2f0",
+                            "inverse-primary": "#ba1a20",
+                            "on-tertiary-fixed": "#1a1c1c",
+                            "tertiary-container": "#6f7070",
+                            "outline-variant": "#5b403d",
+                            "surface-container-highest": "#353534",
+                            "surface-container-high": "#2a2a2a",
+                            "on-surface-variant": "#e4beba",
+                            "primary": "#ffb3ac",
+                            "on-primary-fixed-variant": "#930010",
+                            "on-tertiary": "#2f3131",
+                            "on-secondary-fixed-variant": "#604100",
+                            "error-container": "#93000a",
+                            "tertiary": "#c6c6c6",
+                            "primary-container": "#d32f2f",
+                            "background": "#131313",
+                            "surface": "#131313",
+                            "on-secondary-fixed": "#281900",
+                            "on-secondary": "#432c00",
+                            "secondary-fixed": "#ffdeac",
+                            "secondary-container": "#feb300",
+                            "on-primary-fixed": "#410003",
+                            "tertiary-fixed-dim": "#c6c6c6",
+                            "secondary": "#ffd799",
+                            "primary-fixed": "#ffdad6",
+                            "on-background": "#e5e2e1",
+                            "on-surface": "#e5e2e1",
+                            "outline": "#ab8985",
+                            "inverse-surface": "#e5e2e1",
+                            "on-tertiary-container": "#f5f5f5",
+                            "surface-dim": "#131313",
+                            "surface-container-lowest": "#0e0e0e",
+                            "primary-fixed-dim": "#ffb3ac",
+                            "on-error-container": "#ffdad6",
+                            "inverse-on-surface": "#313030",
+                            "surface-container": "#201f1f",
+                            "secondary-fixed-dim": "#ffba38",
+                            "surface-variant": "#353534",
+                            "surface-tint": "#ffb3ac",
+                            "tertiary-fixed": "#e2e2e2"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.125rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "0.75rem"
+                        },
+                        "spacing": {
+                            "margin-desktop": "64px",
+                            "gutter": "24px",
+                            "container-max": "1280px",
+                            "unit": "8px",
+                            "margin-mobile": "16px"
+                        },
+                        "fontFamily": {
+                            "label-sm": ["Geist"],
+                            "headline-md": ["Barlow Condensed"],
+                            "label-md": ["Geist"],
+                            "headline-xl": ["Barlow Condensed"],
+                            "headline-lg-mobile": ["Barlow Condensed"],
+                            "body-lg": ["Inter"],
+                            "headline-lg": ["Barlow Condensed"],
+                            "body-md": ["Inter"],
+                            "headline-sm": ["Barlow Condensed"]
+                        },
+                        "fontSize": {
+                            "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                            "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                        }
+                    }
+                }
+            }
+        } catch (_e) {}
+    </script>
+</head>
+<body class="dark selection:bg-primary-container selection:text-white">
+
+    <!-- Minimal Silent Preloader -->
+    <div id="preloader">
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Background Canvas Container -->
+    <div class="canvas-container">
+        <canvas id="scroll-canvas"></canvas>
+    </div>
+
+    <!-- Scroll Text Overlay -->
+    <div id="scroll-text-overlay" class="scroll-text-overlay">
+        <h1 class="font-headline-xl text-headline-xl mb-4 text-white uppercase leading-[1.1] tracking-tight">Vishwakarma Shocker Works Mahwa</h1>
+        <p class="font-label-md text-label-md text-primary tracking-widest uppercase">Precision engineering for a perfect ride</p>
+        <p class="font-label-md text-label-md text-secondary-fixed-dim tracking-widest uppercase mt-3">Owner: Umesh  jangid</p>
+    </div>
+
+    <!-- Scroll Spacer to enable scrolling animation -->
+    <div class="scroll-spacer"></div>
+
+    <!-- Content Sections Wrapper (Covers canvas as user scrolls further) -->
+    <div class="content-sections-wrapper">
+        
+        <!-- Section 2: Statistics -->
+        <section class="bg-surface-container-lowest py-16 border-b border-outline-variant">
+            <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter text-center">
+                <div class="p-8 border border-outline-variant/30 metallic-gradient">
+                    <div class="font-headline-xl text-headline-xl text-primary mb-2">30+</div>
+                    <div class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Years Experience</div>
+                </div>
+                <div class="p-8 border border-outline-variant/30 metallic-gradient">
+                    <div class="font-headline-xl text-headline-xl text-primary mb-2">5000+</div>
+                    <div class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Happy Customers</div>
+                </div>
+                <div class="p-8 border border-outline-variant/30 metallic-gradient">
+                    <div class="font-headline-xl text-headline-xl text-primary mb-2">6-MO</div>
+                    <div class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Warranty Backed</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: About Us -->
+        <section class="py-32 px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div class="relative group">
+                <div class="absolute -inset-4 border-2 border-primary/20 translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+                <div class="relative aspect-square bg-surface-container-high overflow-hidden">
+                    <img class="w-full h-full object-cover" alt="Umesh Kumar master technician" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzvfPfXVI-5runx8RQPQNXz8HMv9dKx5U8djHImZmv233pvbwoQPQqU3dR9JfsS5dE1dOJQJsvcUgvQA2jva9El4H_-z8YElNE2W1TdlHP457otr3bCLpQRASwNkACNKDTuJ3q9z86pEAC0xdjakDB39dP2yhWyKPwM-Bo8sYLahgrHgV-4cVKYdRbXE8bZ2M35uSEE8E8EpDHKB2fT_k9LI-LuWDkWhHBVqI72zdxBMCF3Qo8BdPY">
+                </div>
+            </div>
+            <div>
+                <h2 class="font-headline-lg text-headline-lg uppercase mb-8">Built on Experience.<br><span class="text-primary">Driven by Trust.</span></h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                    Founded by the visionary Umesh Kumar, Vishwakarma Shocker Works (VSW) has spent three decades refining the art of suspension engineering. What started as a small workshop in Mahwa has grown into a center of excellence for shock absorber technology.
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant/80 mb-10">
+                    Our philosophy is simple: precision in every stroke. We believe that a suspension isn't just a part; it's the soul of your vehicle's control. Using state-of-the-art diagnostic tools and 30+ years of hands-on technical data, we ensure every repair meets international performance standards.
+                </p>
+                <div class="flex items-center gap-4 p-4 border-l-4 border-primary bg-surface-container">
+                    <span class="material-symbols-outlined text-primary scale-150 ml-2">verified</span>
+                    <div>
+                        <div class="font-label-md text-label-md uppercase text-white">Certified Engineering</div>
+                        <div class="text-sm text-on-surface-variant">Master Technician Approved</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Services Overview -->
+        <section class="bg-surface-container-low py-32 technical-grid" id="services">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="flex justify-between items-end mb-16">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg uppercase">Precision <span class="text-primary">Services</span></h2>
+                        <p class="text-on-surface-variant max-w-md mt-2">Comprehensive suspension diagnostics and overhaul solutions for all motorcycle categories.</p>
+                    </div>
+                    <div class="hidden md:block">
+                        <button class="text-primary font-label-md text-label-md uppercase flex items-center gap-2 group">
+                            View All Services <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="group bg-surface border border-outline-variant p-10 hover:border-primary transition-all duration-300 metallic-gradient">
+                        <span class="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform block">build</span>
+                        <h3 class="font-headline-sm text-headline-sm uppercase mb-4">Shock Absorber Overhaul</h3>
+                        <p class="text-on-surface-variant mb-8">Complete disassembly, ultrasonic cleaning, seal replacement, and high-viscosity oil recharge for gas and oil shocks.</p>
+                        <div class="font-label-sm text-label-sm text-primary uppercase tracking-tighter">Starting at ₹499</div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="group bg-surface border border-outline-variant p-10 hover:border-primary transition-all duration-300 metallic-gradient">
+                        <span class="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform block">settings</span>
+                        <h3 class="font-headline-sm text-headline-sm uppercase mb-4">Front Fork Tuning</h3>
+                        <p class="text-on-surface-variant mb-8">Precision fork alignment, dampening adjustment, and premium seal fitting to eliminate vibrations and leaks.</p>
+                        <div class="font-label-sm text-label-sm text-primary uppercase tracking-tighter">Performance Tuning</div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="group bg-surface border border-outline-variant p-10 hover:border-primary transition-all duration-300 metallic-gradient">
+                        <span class="material-symbols-outlined text-primary text-5xl mb-8 group-hover:scale-110 transition-transform block">history</span>
+                        <h3 class="font-headline-sm text-headline-sm uppercase mb-4">Vintage Restoration</h3>
+                        <p class="text-on-surface-variant mb-8">Specialized restoration for classic Rajdoot, Jawa, and Royal Enfield suspension systems to OEM specifications.</p>
+                        <div class="font-label-sm text-label-sm text-primary uppercase tracking-tighter">Master Artisan Service</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Precision Protocol -->
+        <section class="py-32 px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+            <h2 class="font-headline-lg text-headline-lg uppercase text-center mb-24">The <span class="text-primary">Precision Protocol</span></h2>
+            <div class="relative">
+                <div class="absolute top-1/2 left-0 w-full h-px bg-outline-variant hidden lg:block"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 relative z-10">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-primary-container text-white flex items-center justify-center font-headline-sm text-headline-sm mb-6 border-4 border-background">1</div>
+                        <h4 class="font-label-md text-label-md uppercase mb-2">Inspect</h4>
+                        <p class="text-sm text-on-surface-variant">Deep digital diagnostic of stroke and rebound.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-surface-container text-primary flex items-center justify-center font-headline-sm text-headline-sm mb-6 border-4 border-background">2</div>
+                        <h4 class="font-label-md text-label-md uppercase mb-2">Explain</h4>
+                        <p class="text-sm text-on-surface-variant">Detailed transparent quote and part report.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-surface-container text-primary flex items-center justify-center font-headline-sm text-headline-sm mb-6 border-4 border-background">3</div>
+                        <h4 class="font-label-md text-label-md uppercase mb-2">Repair</h4>
+                        <p class="text-sm text-on-surface-variant">Precision engineering with premium spares.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-surface-container text-primary flex items-center justify-center font-headline-sm text-headline-sm mb-6 border-4 border-background">4</div>
+                        <h4 class="font-label-md text-label-md uppercase mb-2">Quality Check</h4>
+                        <p class="text-sm text-on-surface-variant">Multi-point load testing for durability.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-primary-container text-white flex items-center justify-center font-headline-sm text-headline-sm mb-6 border-4 border-background">5</div>
+                        <h4 class="font-label-md text-label-md uppercase mb-2">Ready to Ride</h4>
+                        <p class="text-sm text-on-surface-variant">Final tuning and delivery of your machine.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Products & Parts -->
+        <section class="bg-surface-container-lowest py-32 border-y border-outline-variant" id="products">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline-lg text-headline-lg uppercase mb-4">Precision <span class="text-primary">Components</span></h2>
+                    <div class="flex flex-wrap justify-center gap-4 mt-8">
+                        <button class="px-6 py-2 bg-primary-container text-white font-label-md text-label-md">All Brands</button>
+                        <button class="px-6 py-2 border border-outline-variant hover:border-primary text-on-surface-variant font-label-md text-label-md transition-colors">Hero</button>
+                        <button class="px-6 py-2 border border-outline-variant hover:border-primary text-on-surface-variant font-label-md text-label-md transition-colors">Honda</button>
+                        <button class="px-6 py-2 border border-outline-variant hover:border-primary text-on-surface-variant font-label-md text-label-md transition-colors">TVS</button>
+                        <button class="px-6 py-2 border border-outline-variant hover:border-primary text-on-surface-variant font-label-md text-label-md transition-colors">Bajaj</button>
+                        <button class="px-6 py-2 border border-outline-variant hover:border-primary text-on-surface-variant font-label-md text-label-md transition-colors">Yamaha</button>
+                        <button class="px-6 py-2 border border-outline-variant hover:border-primary text-on-surface-variant font-label-md text-label-md transition-colors">Royal Enfield</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Wholesale Supply -->
+        <section class="py-32 px-margin-desktop max-w-container-max mx-auto" id="wholesale">
+            <div class="bg-surface-container border border-outline-variant grid grid-cols-1 lg:grid-cols-2">
+                <div class="p-16 flex flex-col justify-center border-r border-outline-variant">
+                    <h2 class="font-headline-lg text-headline-lg uppercase mb-6">B2B <span class="text-primary">Partnership</span></h2>
+                    <p class="text-on-surface-variant text-body-lg mb-10">Are you a garage owner, mechanic, or spare parts dealer? Get access to our technical catalog and bulk pricing for genuine VSW performance parts.</p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-on-surface">
+                            <span class="material-symbols-outlined text-primary">check_circle</span> Wholesale Pricing for Bulk Orders
+                        </li>
+                        <li class="flex items-center gap-3 text-on-surface">
+                            <span class="material-symbols-outlined text-primary">check_circle</span> Technical Support &amp; Training
+                        </li>
+                        <li class="flex items-center gap-3 text-on-surface">
+                            <span class="material-symbols-outlined text-primary">check_circle</span> Priority Dispatch across India
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-16 bg-surface-container-high">
+                    <form class="space-y-6" onsubmit="event.preventDefault();">
+                        <div>
+                            <label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-2 block">Business Name</label>
+                            <input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary text-white p-4 focus:ring-0" type="text">
+                        </div>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-2 block">Contact Person</label>
+                                <input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary text-white p-4 focus:ring-0" type="text">
+                            </div>
+                            <div>
+                                <label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-2 block">Phone Number</label>
+                                <input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary text-white p-4 focus:ring-0" type="tel">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-2 block">Expected Monthly Volume</label>
+                            <select class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary text-white p-4 focus:ring-0">
+                                <option>10 - 50 Units</option>
+                                <option>50 - 200 Units</option>
+                                <option>200+ Units</option>
+                            </select>
+                        </div>
+                        <button class="w-full py-5 bg-primary-container text-white font-headline-sm text-headline-sm uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">Request Wholesale Access</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Warranty & Trust -->
+        <section class="bg-primary-container/10 py-32 border-y border-primary/20" id="warranty">
+            <div class="max-w-container-max mx-auto px-margin-desktop flex flex-col items-center text-center">
+                <div class="w-32 h-32 mb-10 border-4 border-primary rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-6xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg uppercase mb-4 text-white">Repairs Backed by <span class="text-primary">Confidence</span></h2>
+                <p class="max-w-2xl text-on-surface-variant text-body-lg mb-12">Every VSW service and component comes with a comprehensive 6-month performance guarantee. We don't just fix; we ensure long-term reliability.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+                    <div class="p-8 bg-surface-container border border-outline-variant">
+                        <h4 class="font-headline-sm text-headline-sm uppercase text-white mb-2">6 Months</h4>
+                        <p class="text-sm text-on-surface-variant">Full component warranty</p>
+                    </div>
+                    <div class="p-8 bg-surface-container border border-outline-variant">
+                        <h4 class="font-headline-sm text-headline-sm uppercase text-white mb-2">100% Genuine</h4>
+                        <p class="text-sm text-on-surface-variant">Certified spare parts only</p>
+                    </div>
+                    <div class="p-8 bg-surface-container border border-outline-variant">
+                        <h4 class="font-headline-sm text-headline-sm uppercase text-white mb-2">Life Support</h4>
+                        <p class="text-sm text-on-surface-variant">Technical advice after repair</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Gallery (Empty placeholder preserved) -->
+        <section class="py-32 bg-background"></section>
+
+        <!-- Section 10: FAQ & Contact -->
+        <section class="py-32 px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant" id="contact">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg uppercase mb-12">Service <span class="text-primary">Enquiry</span></h2>
+                    <div class="space-y-12 mb-16">
+                        <div class="flex gap-6">
+                            <span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+                            <div>
+                                <h4 class="font-label-md text-label-md uppercase text-white mb-2">Location</h4>
+                                <p class="text-on-surface-variant">jaipur road,Mahwa, Dausa District<br>Rajasthan, India - 321608</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+                            <div>
+                                <h4 class="font-label-md text-label-md uppercase text-white mb-2">Business Hours</h4>
+                                <p class="text-on-surface-variant">Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: By Appointment Only</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <span class="material-symbols-outlined text-primary text-3xl">call</span>
+                            <div>
+                                <h4 class="font-label-md text-label-md uppercase text-white mb-2">Contact</h4>
+                                <p class="text-on-surface-variant">+91 9414401099<br>jangidmayank629@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aspect-video bg-surface-container overflow-hidden grayscale contrast-125 border border-outline-variant">
+                        <img class="w-full h-full object-cover opacity-60" alt="VSW Workshop Location Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzjv81p-P6eN-8xRC1vpAHyzwCeXekkDhJkobn6k4P29PsqE8NW-NLv3vGqRBjIt2pEVsZiBeOcZ_-HgR0eYQjQ2WCkDRPpoxWQWyxNauHW00XdAqovmONNa8-YEnJes6oIT0p9lJIJP2uoFfCrX2pEa6B4Y1klCzhlNG9FQjEhw_sL9whM8MsYlTNcN8vSg4ErnU_VSJwreQ222BgI-cszMJ2xbTDbD3Etv7U-wgoFFJT3OwC8m2_">
+                    </div>
+                </div>
+                <div class="bg-surface-container p-12">
+                    <h3 class="font-headline-sm text-headline-sm uppercase mb-8">Quick Service Quote</h3>
+                    <form class="space-y-6" onsubmit="event.preventDefault();">
+                        <div>
+                            <label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-2 block">Full Name</label>
+                            <input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary text-white p-4 focus:ring-0" type="text">
+                        </div>
+                        <div>
+                            <label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-2 block">Vehicle Model</label>
+                            <input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary text-white p-4 focus:ring-0" placeholder="e.g. Royal Enfield Classic 350" type="text">
+                        </div>
+                        <div>
+                            <label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-2 block">Issue Description</label>
+                            <textarea class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary text-white p-4 focus:ring-0" rows="4"></textarea>
+                        </div>
+                        <button class="w-full py-5 bg-primary-container text-white font-headline-sm text-headline-sm uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">Send Service Request</button>
+                    </form>
+                    <div class="mt-12 pt-12 border-t border-outline-variant">
+                        <h4 class="font-label-md text-label-md uppercase mb-4 text-white">Frequently Asked</h4>
+                        <div class="space-y-4">
+                            <details class="group border-b border-outline-variant pb-4">
+                                <summary class="list-none flex justify-between items-center cursor-pointer font-label-md text-label-md">
+                                    How long does a shocker repair take?
+                                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p class="mt-4 text-sm text-on-surface-variant">Standard overhaul typically takes 4-6 working hours depending on the complexity and part availability.</p>
+                            </details>
+                            <details class="group border-b border-outline-variant pb-4">
+                                <summary class="list-none flex justify-between items-center cursor-pointer font-label-md text-label-md">
+                                    Do you provide home pickup?
+                                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                                </summary>
+                                <p class="mt-4 text-sm text-on-surface-variant">Currently, we offer pickup services within a 10km radius of our Mahwa workshop. Contact us for specifics.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-surface-container-lowest border-t-4 border-primary">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-6 uppercase">VISHWAKARMA shocker works&nbsp;</div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">Precision engineered suspension systems since 2001. Quality at pocket-friendly prices.</p>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-surface-container flex items-center justify-center rounded-lg hover:bg-primary/20 transition-colors cursor-pointer">
+                            <span class="material-symbols-outlined text-primary">public</span>
+                        </div>
+                        <div class="w-10 h-10 bg-surface-container flex items-center justify-center rounded-lg hover:bg-primary/20 transition-colors cursor-pointer">
+                            <span class="material-symbols-outlined text-primary">share</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-label-sm text-label-sm uppercase text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all inline-block" href="#">About Us</a></li>
+                        <li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all inline-block" href="#">Technicians</a></li>
+                        <li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all inline-block" href="#">Dealer Login</a></li>
+                        <li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all inline-block" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-sm text-label-sm uppercase text-white mb-6">Expertise</h4>
+                    <ul class="space-y-4">
+                        <li class="font-body-md text-body-md text-on-surface-variant">Hydraulic Tuning</li>
+                        <li class="font-body-md text-body-md text-on-surface-variant">Gas-Charge Service</li>
+                        <li class="font-body-md text-body-md text-on-surface-variant">Bespoke Fabrication</li>
+                        <li class="font-body-md text-body-md text-on-surface-variant">Vintage Specialist</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-sm text-label-sm uppercase text-white mb-6">Contact Us</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-4">VSW Performance Center,<br>Mahwa, Rajasthan</p>
+                    <button class="bg-primary text-on-primary px-4 py-2 font-label-md text-label-md rounded-lg w-full mb-4">Get Directions</button>
+                    <div class="flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase">
+                        <span class="material-symbols-outlined">phone_in_talk</span> 24/7 Support Active
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-outline-variant px-margin-desktop py-8 max-w-container-max mx-auto text-center">
+                <p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Vishwakarma Shocker Works. Precision Engineered in India.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script>
+        // Micro-interactions and transition animation effects from code.html
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Atmospheric scroll revealing for the layout elements
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-sections-wrapper section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'ease-out');
+        });
+    </script>
+</body>
+</html>
