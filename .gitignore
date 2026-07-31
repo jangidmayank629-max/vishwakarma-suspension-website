@@ -16,6 +16,7 @@ __pycache__/
 
 # IDE configurations
 .vscode/
+
 .idea/
 *.suo
 *.ntvs*
